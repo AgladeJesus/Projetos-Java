@@ -19,8 +19,19 @@ public class Principal {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        int A, B, soma;
+        
+        A = 10;
+        B = 20;
+        
+        soma = B+A
         ClasseDois obj2 = new ClasseDois();
+        ClasseDois obj1 = new ClasseDois();
         obj2.Atributo01 = "Teste";
+        obj1.Atributo01 = "Teste1";
+        boolean Atributo01;
+        System.out.println("Jesus, é o Rei dos Reis!");
+        System.out.println(soma);
     }
     
 }
