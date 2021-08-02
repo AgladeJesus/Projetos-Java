@@ -12,5 +12,6 @@ package pacoteDois;
 public class ClasseDois {
     
     public String Atributo01;
+    public int Atributo02;
     
 }
