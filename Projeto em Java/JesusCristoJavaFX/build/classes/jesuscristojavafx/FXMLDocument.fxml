@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="436.0" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="jesuscristojavafx.FXMLDocumentController">
+   <children>
+      <Button fx:id="btnClick" layoutX="109.0" layoutY="249.0" mnemonicParsing="false" onAction="#clicoubotao" text="Click Aqui">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblMensagem" layoutX="73.0" layoutY="155.0" text="Vai Aparecer uma Mgs" textFill="#da0d0d">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

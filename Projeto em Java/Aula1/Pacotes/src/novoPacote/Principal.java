@@ -24,7 +24,8 @@ public class Principal {
         obj1.Atributo01 = "Teste1";
         System.out.println("Jesus, é o Rei dos Reis!");
         System.out.println(obj2.Atributo01);
-        
+       
+      
         
     }
     
