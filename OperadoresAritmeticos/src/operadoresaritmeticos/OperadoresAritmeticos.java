@@ -26,6 +26,8 @@ public class OperadoresAritmeticos {
         System.out.println(valor);
         System.out.println(numero);*/
        
+      /*
+       
        int a = 4;
        a += 2; // a = a + 2
         System.out.println(a);
@@ -45,6 +47,16 @@ public class OperadoresAritmeticos {
        int e = 4;
        e /= Math.PI; // e = e / 2
         System.out.println(e);
+        
+        */
+      
+      float v = 8.9f;
+      int ar = (int) Math.round(v);
+      System.out.println(ar);
+      
+      double ale = Math.random();
+      int n = (int) (1 + ale * (10-1));
+      System.out.println(n);
         
         
         
