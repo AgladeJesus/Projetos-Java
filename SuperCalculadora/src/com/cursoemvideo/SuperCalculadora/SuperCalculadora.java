@@ -197,6 +197,10 @@ public class SuperCalculadora extends javax.swing.JFrame {
         double rc = Math.cbrt(num);
         lblRaizC.setText(Double.toString(rc));
         
+        //VALOR ABSOLUTO
+        int vrabs = Math.abs(num);
+        lblAbs.setText(Integer.toString(vrabs));
+        
         panCalc.setVisible(true);
         
     }//GEN-LAST:event_btnCalcActionPerformed
