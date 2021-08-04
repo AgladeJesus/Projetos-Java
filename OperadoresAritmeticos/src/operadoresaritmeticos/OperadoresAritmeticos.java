@@ -21,9 +21,36 @@ public class OperadoresAritmeticos {
         float m = (n1+n2)/2;
         System.out.println("A média é igual a " + m);*/
         
-        int numero = 5;
-        numero++;
-        System.out.println(numero);
+       /* int numero = 5;
+        int valor = 5 + numero++;
+        System.out.println(valor);
+        System.out.println(numero);*/
+       
+       int a = 4;
+       a += 2; // a = a + 2
+        System.out.println(a);
+        
+       int b = 4;
+       b -= 2; // b = b + 2
+        System.out.println(b);
+
+       int c = 4;
+       c *= 2; // c = c + 2
+        System.out.println(c);
+        
+       int d = 4;
+       d /= 2; // d = d + 2
+        System.out.println(d);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
          
     }
     
