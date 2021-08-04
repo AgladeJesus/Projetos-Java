@@ -57,17 +57,11 @@ public class OperadoresAritmeticos {
       double ale = Math.random();
       int n = (int) (1 + ale * (10-1));
       System.out.println(n);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-         
+      
+      double ale1 = Math.random();
+      //int n = (int) (1 + ale * (10-1));
+      System.out.println(ale1);
+      
     }
     
 }
