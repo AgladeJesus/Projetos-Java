@@ -38,6 +38,8 @@ public class telaidade extends javax.swing.JFrame {
 
         jLabel1.setText("Ano de Nascimento");
 
+        txtAN.setModel(new javax.swing.SpinnerNumberModel(1500, 1500, 3000, 1));
+
         btnCalc.setText("Calcular");
         btnCalc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
