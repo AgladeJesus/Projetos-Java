@@ -22,10 +22,12 @@ public class CursoJava {
         System.out.printf("Valor da variavel res:%d\nNome:%s%n%n",res, nome);
         */
       
-      int nota=30;
+      int nota=85;
+      int faltas=10;
+      int maxFaltas=5;
       int media=60;
       
-      if(nota >= media){
+      if((nota >= media) && (faltas <= maxFaltas)){
           System.out.println("Aprovado");
       }else if (nota >=40){
           System.out.println("Recuperação");
