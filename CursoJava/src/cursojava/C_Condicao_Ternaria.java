@@ -1,7 +1,7 @@
 
 package cursojava;
 
-public class C_CondicaoTernaria {
+public class C_Condicao_Ternaria {
 
     public static void main(String[] args) {
       int nota=85;
