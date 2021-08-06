@@ -1,6 +1,6 @@
 package cursojava;
 
-public class Variaves {
+public class A_Variaves {
     public static void main(String[] args) {
         int num=0;
         int num1=10;
