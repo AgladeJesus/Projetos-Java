@@ -2,7 +2,7 @@ package cursojava;
 
 public class D_Condicao__Switch {
     public static void main(String[] args) {
-        int post=6;
+        int post=8;
         
         switch(post){
             case 1:
@@ -14,6 +14,8 @@ public class D_Condicao__Switch {
             case 3:
                 System.out.println("Terceiro lugar");
                 break;
+            case 4: case 5: case 6:
+                System.out.println("Obrigado pela participação");
             default:
                 System.out.println("Não subiu no podium");
                 break;
