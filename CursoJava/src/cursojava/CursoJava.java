@@ -26,7 +26,17 @@ public class CursoJava {
       int faltas=10;
       int maxFaltas=5;
       int media=60;
+      int res;
       
+      //CONDIÇÃO TERNÁRIA
+      /*res=(nota >= media ? "Aprovado" : "Reprovado");
+      System.out.println("Resultado: " + res);
+      */
+      
+      res=(nota >= media ? 1 : 0);
+      System.out.println("Resultado: " + (res==1?"Aprovado":"Reprovado"));
+      
+      /*
       if((nota >= media) && (faltas <= maxFaltas)){
           System.out.println("Aprovado");
       }else if (nota >=40){
@@ -35,6 +45,6 @@ public class CursoJava {
           System.out.println("Reprovado");
       }
       System.out.println("Fim do programa");
+      */
     }
-    
 }
