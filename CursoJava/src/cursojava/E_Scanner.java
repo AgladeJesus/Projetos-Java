@@ -21,9 +21,15 @@ public class E_Scanner {
         nota3=scan.nextInt();
         
         media=(nota1+nota2+nota3)/3;
-        System.out.println(media);
-        System.out.printf("1ª Nota: %d%n2ª Nota: %d%n3ª Nota: %d%nMédia: %d%n ",nota1,nota2,nota3,media);
         
-    }
+        if(media >=70){
+            System.out.println("Aprovado");
+        } else if(media >= 40) {
+               System.out.println("Recuperação");
+        } else {
+            System.out.println("Reprovado");
+        }
+        System.out.printf("1ª Nota: %d%n2ª Nota: %d%n3ª Nota: %d%nMédia: %d%n ",nota1,nota2,nota3,media);
     
+}
 }
