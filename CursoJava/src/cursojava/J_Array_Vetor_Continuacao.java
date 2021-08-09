@@ -4,7 +4,7 @@ public class J_Array_Vetor_Continuacao {
     public static void main(String[] args) {
         
         final int tam=5;
-        char[] gabarito={'a','a','d','b','c'};
+        char[] gabarito={'a','a','c','b','c'};
         char[] respostas=new char[tam];
         int nota=0;
         
@@ -19,10 +19,8 @@ public class J_Array_Vetor_Continuacao {
                 nota++;
                 System.out.println(respostas[i]);
             }
-    
         }
         
-        System.out.printf("Nota do Aluno: %d", nota);
+        System.out.printf("Nota do Aluno: %d%n%n", nota);
     }
-    
 }
