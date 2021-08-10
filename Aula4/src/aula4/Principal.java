@@ -5,11 +5,17 @@
  */
 package aula4;
 
+import javax.swing.*;
+import java.sql.*;
+
 /**
  *
  * @author aglad
  */
 public class Principal extends javax.swing.JFrame {
+    public Connection com = null;
+    public Statement stmt;
+    public ResultSet rs;
 
     /**
      * Creates new form Principal
