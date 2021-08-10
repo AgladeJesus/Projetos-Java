@@ -57,6 +57,11 @@ public class Principal extends javax.swing.JFrame {
                 btnMouseMouseExited(evt);
             }
         });
+        btnMouse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMouseActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnMouse);
         btnMouse.setBounds(100, 30, 140, 24);
 
@@ -95,6 +100,12 @@ public class Principal extends javax.swing.JFrame {
         
         lblResultado.setText("O botão recebeu foco");
     }//GEN-LAST:event_btnFocoFocusGained
+
+    private void btnMouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMouseActionPerformed
+        // TODO add your handling code here:
+        
+        lblResultado.setText("Click do botão feio");
+    }//GEN-LAST:event_btnMouseActionPerformed
 
     /**
      * @param args the command line arguments
