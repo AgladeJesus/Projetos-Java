@@ -40,7 +40,7 @@ public class Principal extends javax.swing.JFrame {
         txtNome = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtDesc = new javax.swing.JTextArea();
-        btnAdicionar = new javax.swing.JButton();
+        btnInserir = new javax.swing.JButton();
         btnDeletar = new javax.swing.JButton();
         btnAtualizar = new javax.swing.JButton();
         btnLimparCampos = new javax.swing.JButton();
@@ -76,9 +76,14 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(120, 120, 430, 150);
 
-        btnAdicionar.setText("Adicionar");
-        getContentPane().add(btnAdicionar);
-        btnAdicionar.setBounds(160, 300, 90, 23);
+        btnInserir.setText("Inserir");
+        btnInserir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInserirActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnInserir);
+        btnInserir.setBounds(160, 300, 90, 23);
 
         btnDeletar.setText("Deletar");
         btnDeletar.setMaximumSize(new java.awt.Dimension(70, 23));
@@ -129,6 +134,27 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLimparCamposActionPerformed
 
+    private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
+        // TODO add your handling code here:
+        
+        try {
+            
+        Class.forName("com.mysql.jdbc.Driver");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost/dbaula4", "root", " ");
+        stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            String sql = "INSERT INTO cursoVALUES('"
+                    + txtSigla.getText() + "','"
+                    + txtNome.getText() + "','"
+                    + txtDesc.getText() + "')";
+        JOptionPane.showMessageDialog(null, sql);
+        int i = 0;
+            
+        
+        
+        }
+        
+    }//GEN-LAST:event_btnInserirActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -165,11 +191,11 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAdicionar;
     private javax.swing.JButton btnAnterior;
     private javax.swing.JButton btnAtualizar;
     private javax.swing.JButton btnDeletar;
     private javax.swing.JLabel btnDesc;
+    private javax.swing.JButton btnInserir;
     private javax.swing.JButton btnLimparCampos;
     private javax.swing.JLabel btnNome;
     private javax.swing.JButton btnPrimeiro;
