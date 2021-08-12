@@ -24,3 +24,18 @@ update tbusuarios set fone='8888-8888' where iduser=2;
 
 delete from tbusuarios where iduser=3;
 
+create table tbclientes(
+idcli int primary key auto_increment,
+nomecli varchar(50) not null,
+endcli varchar(100),
+fonecli varchar(50) not null,
+emailcli varchar(50)
+);
+
+describe tbclientes;
+
+insert into tbclientes(nomecli,endcli,fonecli,emailcli)
+values('Linus Torvalds','Rua Tux, 2015','9999-9999','linus@linus.com');
+
+select * from tbclientes;
+
