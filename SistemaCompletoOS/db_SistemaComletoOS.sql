@@ -81,10 +81,12 @@ insert into tbos(equipamento,defeito,servico,tecnico,valor,idcli)
 values('Notebook Dell','Não Liga','Reparo da fonte','Leandro','100.00',3);
 
 select
-O.os,equipamento,defeito,servico, valor,
+O.os,data_os,equipamento,defeito,servico, valor,tecnico,
 C.nomecli,fonecli
 from tbos as O
 inner join tbclientes as C
 on (O.idcli = C.idcli);
+
+update tbos set tecnico='Leandro' where os=9;
 
 
