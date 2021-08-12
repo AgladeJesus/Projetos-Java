@@ -37,6 +37,12 @@ describe tbclientes;
 insert into tbclientes(nomecli,endcli,fonecli,emailcli)
 values('Linus Torvalds','Rua Tux, 2015','9999-9999','linus@linus.com');
 
+insert into tbclientes(nomecli,endcli,fonecli,emailcli)
+values('Lohanny Marcelly','Rua S6, 46','99256-5325','lohanny@gmail.com');
+
+insert into tbclientes(nomecli,endcli,fonecli,emailcli)
+values('Arthur Fernando','Rua S6, 46','99280-5350','arthur@gmail.com');
+
 select * from tbclientes;
 
 create table tbos(
@@ -58,6 +64,21 @@ select * from tbos;
 
 insert into tbos(equipamento,defeito,servico,tecnico,valor,idcli)
 values('Notebook','Não Liga','Troca da fonte','Zé','87.50',1);
+
+insert into tbos(equipamento,defeito,servico,tecnico,valor,idcli)
+values('Notebook Acer','Tela quebrada','Troca da tela','Adriano','245.85',1);
+
+insert into tbos(equipamento,defeito,servico,tecnico,valor,idcli)
+values('Notebook Samsung','Lentidão','Formartação do Sistema operacional','Leandro','300.00',1);
+
+insert into tbos(equipamento,defeito,servico,tecnico,valor,idcli)
+values('Notebook Dell','Lentidão','Formartação do Sistema operacional','Leandro','300.00',2);
+
+insert into tbos(equipamento,defeito,servico,tecnico,valor,idcli)
+values('Notebook Asus','Tela trincada','Troca da tela','leandro','300.00',3);
+
+insert into tbos(equipamento,defeito,servico,tecnico,valor,idcli)
+values('Notebook Dell','Não Liga','Reparo da fonte','Leandro','100.00',3);
 
 select
 O.os,equipamento,defeito,servico, valor,
