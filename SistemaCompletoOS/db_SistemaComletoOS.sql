@@ -20,9 +20,15 @@ values(2,'Administrador','9999-9998','admin','admin');
 insert into tbusuarios(iduser,usuario,fone,login,senha)
 values(3,'Bill Gates','9999-9997','bill','123456');
 
+select * from tbusuarios;
+
 update tbusuarios set fone='8888-8888' where iduser=2;
 
+select * from tbusuarios;
+
 delete from tbusuarios where iduser=3;
+
+select * from tbusuarios;
 
 create table tbclientes(
 idcli int primary key auto_increment,
@@ -87,6 +93,6 @@ from tbos as O
 inner join tbclientes as C
 on (O.idcli = C.idcli);
 
-update tbos set tecnico='Leandro' where os=9;
+update tbos set tecnico='Leandro' where os=5;
 
 
