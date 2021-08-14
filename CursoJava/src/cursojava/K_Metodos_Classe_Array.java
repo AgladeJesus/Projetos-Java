@@ -1,6 +1,6 @@
 package cursojava;
 
-public class L_Metodos_Classe_Array {
+public class K_Metodos_Classe_Array {
     public static void main(String[] args) {
         int[] num={10,20,30,40,50};
         
