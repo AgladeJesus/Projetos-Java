@@ -16,6 +16,14 @@ public class M_Entedendo_Metodos {
         return res;
     }
     
+    public static Double soma(Double...numeros){
+        Double res=0.0;
+        for(Double n:numeros){
+            res+=n;
+        }
+        return res;
+    }
+    
     public static int soma2(int n1, int n2){
         int res=n1+n2;
         return res;
