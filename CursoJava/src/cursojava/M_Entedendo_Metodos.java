@@ -2,12 +2,18 @@ package cursojava;
 
 public class M_Entedendo_Metodos {
     public static void main(String[] args) {
-        
-        int r;
-        
-        msg("Deus Pai",5);
+                
+        msg("Deus Pai",1);
         System.out.println(soma2(10,5));
-        
+        System.out.printf("A soma dos inicio das datas é: %d%n",soma(30,7,18,4));
+    }
+    
+    public static int soma(int...numeros){
+        int res=0;
+        for(int n:numeros){
+            res+=n;
+        }
+        return res;
     }
     
     public static int soma2(int n1, int n2){
