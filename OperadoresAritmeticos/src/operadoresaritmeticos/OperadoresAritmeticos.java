@@ -50,7 +50,7 @@ public class OperadoresAritmeticos {
         
         */
       
-      float v = 8.9f;
+      float v = 8.5f;
       int ar = (int) Math.round(v);
       System.out.println(ar);
       
