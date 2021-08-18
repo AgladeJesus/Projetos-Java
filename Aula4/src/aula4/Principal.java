@@ -13,7 +13,7 @@ import java.sql.*;
  * @author aglad
  */
 public class Principal extends javax.swing.JFrame {
-    public Connection com = null;
+    public Connection conn = null;
     public Statement stmt;
     public ResultSet rs;
 
@@ -51,6 +51,8 @@ public class Principal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(650, 450));
+        setResizable(false);
         getContentPane().setLayout(null);
 
         btnSilga.setText("Silga:");
@@ -135,23 +137,27 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLimparCamposActionPerformed
 
     private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
-        // TODO add your handling code here:
-        
-        try {
-            
-        Class.forName("com.mysql.jdbc.Driver");
-        conn = DriverManager.getConnection("jdbc:mysql://localhost/dbaula4", "root", " ");
-        stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-            String sql = "INSERT INTO cursoVALUES('"
-                    + txtSigla.getText() + "','"
-                    + txtNome.getText() + "','"
-                    + txtDesc.getText() + "')";
-        JOptionPane.showMessageDialog(null, sql);
-        int i = 0;
-            
-        
-        
-        }
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/dbaula4", "root","root");
+            stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+                String sql = "INSERT INTO curso VALUES('"
+                        + txtSigla.getText() + "','"
+                        + txtNome.getText() + "','"
+                        + txtDesc.getText() + "')";
+            JOptionPane.showMessageDialog(null, sql);
+            int i = 0;
+            i = stmt.executeUpdate(sql);//Execultando o comando sql
+            stmt.close();
+            if(i>0){
+            JOptionPane.showConfirmDialog(null,"Curso cadastrado com sucesso!");
+            abreTabela();
+                    }     
+            } catch (ClassNotFoundException e) {
+                System.out.println(e);
+            } catch (SQLExeption e) {
+                System.out.println(e);
+            }
         
     }//GEN-LAST:event_btnInserirActionPerformed
 
