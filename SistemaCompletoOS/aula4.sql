@@ -1,6 +1,6 @@
 use dbaula4;
 create table `curso`(
-	`Silga` CHAR(10),
+	`Sigla` CHAR(10),
     `Nome` VARCHAR(64),
     `Descricao` VARCHAR(256)
 );
@@ -8,5 +8,9 @@ create table `curso`(
 drop table cruso;
 describe curso;
 select * from curso;
+drop table curso;
 
-insert into(Sigla,Nome,Descricao)
+
+
+insert into curso(Sigla,Nome,Descricao)
+values("AJ","Alexandre","de Jesus Miranda");
