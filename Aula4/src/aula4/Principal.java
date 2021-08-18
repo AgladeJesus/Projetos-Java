@@ -79,6 +79,11 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane1.setBounds(120, 120, 430, 150);
 
         btnInserir.setText("Inserir");
+        btnInserir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnInserirMouseClicked(evt);
+            }
+        });
         btnInserir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInserirActionPerformed(evt);
@@ -90,6 +95,11 @@ public class Principal extends javax.swing.JFrame {
         btnDeletar.setText("Deletar");
         btnDeletar.setMaximumSize(new java.awt.Dimension(70, 23));
         btnDeletar.setPreferredSize(new java.awt.Dimension(70, 23));
+        btnDeletar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnDeletarMouseClicked(evt);
+            }
+        });
         getContentPane().add(btnDeletar);
         btnDeletar.setBounds(280, 300, 80, 23);
 
@@ -137,30 +147,96 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLimparCamposActionPerformed
 
     private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
+       // TODO add your handling code here
+        
+    }//GEN-LAST:event_btnInserirActionPerformed
+
+    private void btnInserirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInserirMouseClicked
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/dbaula4", "root","root");
-            stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-                String sql = "INSERT INTO curso VALUES('"
-                        + txtSigla.getText() + "','"
-                        + txtNome.getText() + "','"
-                        + txtDesc.getText() + "')";
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/dbaula4","root","root");
+            stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
+                    ResultSet.CONCUR_UPDATABLE);
+            String sql = "INSERT INTO curso VALUES('"
+                    + txtSigla.getText() + "','"
+                    + txtNome.getText() + "','"
+                    + txtDesc.getText() + "')";
             JOptionPane.showMessageDialog(null, sql);
             int i = 0;
             i = stmt.executeUpdate(sql);//Execultando o comando sql
             stmt.close();
-            if(i>0){
-            JOptionPane.showConfirmDialog(null,"Curso cadastrado com sucesso!");
-            abreTabela();
-                    }     
-            } catch (ClassNotFoundException e) {
-                System.out.println(e);
-            } catch (SQLExeption e) {
-                System.out.println(e);
-            }
-        
-    }//GEN-LAST:event_btnInserirActionPerformed
+            if (i > 0) {
+                JOptionPane.showMessageDialog(null, "Curso cadastrado com sucesso!");
+                abreTabela();
+            }     
+        } catch (ClassNotFoundException e) {
+            System.out.println(e);
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_btnInserirMouseClicked
 
+    private void btnDeletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeletarMouseClicked
+        String query1 = "DELETE FROM curso WHERE(Sigla=";
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/dbaula4","root","root");
+            stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
+                    ResultSet.CONCUR_UPDATABLE);
+            String sql = query1 + "'" + txtSigla.getText() + "')";
+            JOptionPane.showMessageDialog(null, sql);
+            int i = 0;
+            i = stmt.executeUpdate(sql);
+            int y = 0;
+            stmt.close();
+            y = stmt.CLOSE_CURRENT_RESULT;
+            if (i > 0){
+                JOptionPane.showMessageDialog(null, "Curso deletado com sucesso!");
+                
+                //limpando campos
+                txtSigla.setText("");
+                txtNome.setText("");
+                txtDesc.setText("");
+                            
+                atualiza_campos();
+            }
+            
+        } catch (ClassNotFoundException e) {
+            System.out.println(e);
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_btnDeletarMouseClicked
+
+    public void atualiza_campos(){
+        try{
+            txtSigla.setText("" + rs.getString("Silga"));
+            txtNome.setText("" + rs.getString("Nome"));
+            txtDesc.setText("" + rs.getString("Descricao"));
+        } catch (SQLException e){
+            System.out.println(e);
+        
+        }
+    }
+    
+    public void abreTabela(){
+        String query1 = "select * from curso";
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/dbaula4","root","root");
+            stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
+                    ResultSet.CONCUR_READ_ONLY);
+            rs = stmt.executeQuery(query1);
+            rs.first();
+            atualiza_campos();
+        } catch (ClassNotFoundException e) {
+            System.out.println(e);
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
