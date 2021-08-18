@@ -1,3 +1,4 @@
+drop database sys;
 create database dbinfox;
 use dbinfox;
 create table tbusuarios(
@@ -85,6 +86,10 @@ values('Notebook Asus','Tela trincada','Troca da tela','leandro','300.00',3);
 
 insert into tbos(equipamento,defeito,servico,tecnico,valor,idcli)
 values('Notebook Dell','Não Liga','Reparo da fonte','Leandro','100.00',3);
+
+insert into tbos(equipamento,defeito,servico,tecnico,valor,idcli)
+values('Notebook Dell','Não Liga','Reparo da fonte','Leandro','100.00',6);
+
 
 select
 O.os,data_os,equipamento,defeito,servico, valor,tecnico,
