@@ -40,7 +40,8 @@ ResultSet rs = null;
         jPasswordField1 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("X - System - Login");
+        setTitle("InfoX - Sistema de Login");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setPreferredSize(new java.awt.Dimension(355, 165));
         setResizable(false);
 
