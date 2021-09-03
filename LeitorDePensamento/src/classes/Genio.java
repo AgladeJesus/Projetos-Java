@@ -41,6 +41,9 @@ public class Genio extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 255, 153));
+        setPreferredSize(new java.awt.Dimension(360, 410));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblFrase.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -60,6 +63,7 @@ public class Genio extends javax.swing.JFrame {
         txtVal.setModel(new javax.swing.SpinnerNumberModel(1, 0, 5, 1));
         getContentPane().add(txtVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 50, -1));
 
+        btnPalpite.setBackground(new java.awt.Color(0, 204, 0));
         btnPalpite.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnPalpite.setText("Palpite");
         btnPalpite.addActionListener(new java.awt.event.ActionListener() {
@@ -70,6 +74,7 @@ public class Genio extends javax.swing.JFrame {
         getContentPane().add(btnPalpite, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 90, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnPalpiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPalpiteActionPerformed
