@@ -33,7 +33,7 @@ public class TelaIdade extends javax.swing.JFrame {
         lblIdade = new javax.swing.JLabel();
         txtAno = new javax.swing.JTextField();
         btnCalc = new javax.swing.JButton();
-        lblSituação = new javax.swing.JLabel();
+        lblSituacao = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,7 +58,7 @@ public class TelaIdade extends javax.swing.JFrame {
             }
         });
 
-        lblSituação.setText("<vazio>");
+        lblSituacao.setText("<vazio>");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,7 +81,7 @@ public class TelaIdade extends javax.swing.JFrame {
                                 .addGap(123, 123, 123)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblSituação, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblSituacao, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblIdade, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(172, Short.MAX_VALUE))
         );
@@ -101,7 +101,7 @@ public class TelaIdade extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(lblSituação))
+                    .addComponent(lblSituacao))
                 .addContainerGap(97, Short.MAX_VALUE))
         );
 
@@ -117,6 +117,8 @@ public class TelaIdade extends javax.swing.JFrame {
         int ano = Integer.parseInt(txtAno.getText());
         int idade = 2021 - ano;
         lblIdade.setText(Integer.toString(idade));
+        String sit = (idade>=18)?"Maior":"Menor";
+        lblSituacao.setText(sit);
     }//GEN-LAST:event_btnCalcActionPerformed
 
     /**
@@ -160,7 +162,7 @@ public class TelaIdade extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblIdade;
-    private javax.swing.JLabel lblSituação;
+    private javax.swing.JLabel lblSituacao;
     private javax.swing.JTextField txtAno;
     // End of variables declaration//GEN-END:variables
 }
