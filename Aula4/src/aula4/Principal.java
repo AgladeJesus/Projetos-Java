@@ -154,7 +154,7 @@ public class Principal extends javax.swing.JFrame {
     private void btnInserirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInserirMouseClicked
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/dbaula4","root","root");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/dbaula4","root","123");
             stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
                     ResultSet.CONCUR_UPDATABLE);
             String sql = "INSERT INTO curso VALUES('"
@@ -223,7 +223,7 @@ public class Principal extends javax.swing.JFrame {
         String query1 = "select * from curso";
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/dbaula4","root","root");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/dbaula4","root","123");
             stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
                     ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery(query1);

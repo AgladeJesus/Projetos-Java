@@ -12,13 +12,14 @@ public class ModuloConexao {
         //Armazenando informaçãoes referente a banco
         String url="jdbc:mysql://localhost:3306/dbinfox";
         String user="root";
-        String password = "root";
+        String password = "123";
         // Estabelecendo a conexão com banco
         try {
             Class.forName(driver);
-            conexao = DriverManeger.getConnection(url, user, password);
+            conexao = DriverManager.getConnection(url, user, password);
             return conexao;
         } catch (Exception e) {
+            System.out.println(e);
             return null;
         }
     }
