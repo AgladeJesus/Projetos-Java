@@ -21,7 +21,7 @@ public class OperadoresLogicos {
         
         x = 4;
         y = 7;
-        z = 12;
+        z = 30;
         
         r = (x<y ^ y<z)?true:false;
         System.out.println(r);
